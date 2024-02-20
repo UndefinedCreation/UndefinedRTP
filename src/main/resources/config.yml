@@ -1,0 +1,23 @@
+# Plugin Name : UndefinedRTP
+# Version : 1.0
+# Authors : RedMagic
+
+overworld:
+  name: "world"
+  range: 100
+nether:
+  name: "world_nether"
+  range: 100
+end:
+  name: "world_the_end"
+  range: 100
+
+allowed-blocks:
+  - DIRT
+
+
+cooldown: 15
+
+auto-fill-worldborder: false
+
+max-attemps: 10

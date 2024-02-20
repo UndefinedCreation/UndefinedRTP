@@ -1,0 +1,4 @@
+name: UndefinedRTP
+version: '${version}'
+main: com.redmagic.undefinedrtp.UndefinedRTP
+api-version: '1.20'
