@@ -14,6 +14,7 @@ import com.redmagic.undefinedrtp.gui.RTPGUI
 import jdk.incubator.vector.VectorOperators.Test
 import net.kyori.adventure.text.Component
 import net.wesjd.anvilgui.AnvilGUI
+import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.event.inventory.InventoryCloseEvent
@@ -27,11 +28,17 @@ class UndefinedRTP : JavaPlugin() {
     var adminManager: AdminManager? = null
     var rtpManager: RTPManager? = null
 
-    val rtpgui: RTPGUI = RTPGUI(this)
+    var rtpgui: RTPGUI? = null
+
+    override fun onLoad() {
+        Bukkit.getLogger().info("Loading UndefinedRTP")
+    }
 
     override fun onEnable() {
         // Plugin startup logic
         UndefinedAPI(this)
+
+        rtpgui = RTPGUI(this)
 
         configManager = ConfigManager(this)
 
@@ -42,8 +49,6 @@ class UndefinedRTP : JavaPlugin() {
         registerCommands()
 
     }
-
-
 
     override fun onDisable() {
         // Plugin shutdown logic

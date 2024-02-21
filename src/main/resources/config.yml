@@ -1,7 +1,10 @@
-# Plugin Name : UndefinedRTP
-# Version : 1.0
-# Authors : RedMagic
+# This plugin is created my the Undefined team.
+# Its a lite weight rtp plugin with a gui
+# Easy to edit options in the admin gui
+# Any question or help join the discord here : https://discord.gg/udq9r4kves
 
+# This is the data of the worlds save the world name and the ranges
+# This is able to be changed in game using the admin gui
 overworld:
   name: "world"
   range: 100
@@ -12,13 +15,19 @@ end:
   name: "world_the_end"
   range: 100
 
+# This is a list of all the allowed block that the player can random teleport on.
+# This is able to be changed in game using the admin gui
 allowed-blocks:
   - DIRT
 
+# Countdown is the time in seconds for the player not to move before a teleport
 countdown: 5
 
+# Cooldown is the time in seconds for the player to be able to random teleport again
 cooldown: 15
 
+# Autofill will automatically set the range of the random teleport to the worldborder
 auto-fill-worldborder: false
 
+# Max attemps is the attemps the system will try and find a location
 max-attemps: 10

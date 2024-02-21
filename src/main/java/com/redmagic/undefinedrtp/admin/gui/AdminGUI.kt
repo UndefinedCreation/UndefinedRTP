@@ -333,7 +333,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
     }
 
     private fun setCountDownItem(inventory: Inventory){
-        inventory.setItem(15, ItemBuilder(Material.CLOCK)
+        inventory.setItem(15, ItemBuilder(Material.COMPASS)
                 .setName(miniMessage.deserialize("<!i><bold><#2089d4>ᴄᴏᴜɴᴛᴅᴏᴡɴ"))
                 .addLine(Component.text(" "))
                 .addLine(miniMessage.deserialize("<!i><gray>${plugin.configManager!!.countdown} <aqua>ѕᴇᴄᴏɴᴅѕ"))

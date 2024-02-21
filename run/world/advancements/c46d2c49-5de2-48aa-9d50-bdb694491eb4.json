@@ -71,5 +71,36 @@
     },
     "done": true
   },
+  "minecraft:nether/root": {
+    "criteria": {
+      "entered_nether": "2024-02-21 20:49:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_nether": {
+    "criteria": {
+      "entered_nether": "2024-02-21 20:49:23 +0100"
+    },
+    "done": true
+  },
+  "minecraft:nether/explore_nether": {
+    "criteria": {
+      "minecraft:nether_wastes": "2024-02-21 20:49:24 +0100",
+      "minecraft:warped_forest": "2024-02-21 20:56:46 +0100"
+    },
+    "done": false
+  },
+  "minecraft:end/root": {
+    "criteria": {
+      "entered_end": "2024-02-21 20:57:09 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enter_the_end": {
+    "criteria": {
+      "entered_end": "2024-02-21 20:57:09 +0100"
+    },
+    "done": true
+  },
   "DataVersion": 3700
 }

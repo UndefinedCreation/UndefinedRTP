@@ -6,11 +6,10 @@ nether:
   range: 100.0
 end:
   name: world_the_end
-  range: 100.0
+  range: 500.0
 cooldown: 15
-auto-fill-world-bolder: false
+auto-fill-world-bolder: true
 max-attempts: 10
 allow-blocks:
 - DIRT
-- MANGROVE_PLANKS
-- COBBLESTONE
+countdown: 5

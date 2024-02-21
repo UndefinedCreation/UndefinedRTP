@@ -21,7 +21,6 @@ class RTPManager(val plugin: UndefinedRTP) {
             }
         }
 
-        println(range)
         return world.randomLocation(range.toDouble())
     }
 
@@ -30,7 +29,6 @@ class RTPManager(val plugin: UndefinedRTP) {
         var attempts = 0
         while (attempts < plugin.configManager!!.maxAttemps) {
             val location = getLocation(world)
-            println(location.toString())
             if (location.clone().subtract(0.0,1.0,0.0).block.type in plugin.configManager!!.allowedBlocks && location.clone().add(0.0,1.0,0.0).block.type.isAir) {
                 return location
             }
@@ -40,7 +38,7 @@ class RTPManager(val plugin: UndefinedRTP) {
 
     }
 
-    fun getCheckLocationAsync(world: World): CompletableFuture<Location>{
+    fun getCheckLocationAsync(world: World): CompletableFuture<Location?>{
         return CompletableFuture.supplyAsync {
             getCheckLocation(world)
         }
