@@ -1,0 +1,16 @@
+overworld:
+  name: world
+  range: 100.0
+nether:
+  name: world_nether
+  range: 100.0
+end:
+  name: world_the_end
+  range: 100.0
+cooldown: 15
+auto-fill-world-bolder: false
+max-attempts: 10
+allow-blocks:
+- DIRT
+- MANGROVE_PLANKS
+- COBBLESTONE

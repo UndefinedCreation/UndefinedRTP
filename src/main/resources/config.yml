@@ -15,6 +15,7 @@ end:
 allowed-blocks:
   - DIRT
 
+countdown: 5
 
 cooldown: 15
 

@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UndefinedRTP.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UndefinedRTP.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/UndefinedRTP.test.iml" filepath="$PROJECT_DIR$/.idea/modules/UndefinedRTP.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.test.iml" />
     </modules>
   </component>
 </project>

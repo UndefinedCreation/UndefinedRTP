@@ -26,7 +26,6 @@ class AdminCommand(val plugin: UndefinedRTP): UndefinedCommand(
     override fun execute(sender: CommandSender, args: Array<out String>) {
         val player: Player = sender as Player
 
-
         player.openMenu(plugin.adminManager!!.adminGUI)
     }
 

@@ -1,40 +1,42 @@
-[21:54:38] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[21:54:40] [ServerMain/INFO]: Loaded 1174 recipes
-[21:54:40] [ServerMain/INFO]: Loaded 1271 advancements
-[21:54:40] [Server thread/INFO]: Starting minecraft server version 1.20.4
-[21:54:40] [Server thread/INFO]: Loading properties
-[21:54:40] [Server thread/INFO]: This server is running Paper version git-Paper-430 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 4939f87)
-[21:54:40] [Server thread/INFO]: Using 4 threads for Netty based IO
-[21:54:40] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[21:54:41] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+[12:41:00] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[12:41:02] [ServerMain/INFO]: Loaded 1174 recipes
+[12:41:02] [ServerMain/INFO]: Loaded 1271 advancements
+[12:41:03] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[12:41:03] [Server thread/INFO]: Loading properties
+[12:41:03] [Server thread/INFO]: This server is running Paper version git-Paper-430 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 4939f87)
+[12:41:03] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[12:41:03] [Server thread/INFO]: Using 4 threads for Netty based IO
+[12:41:04] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
     We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
     For more information please visit: https://github.com/PaperMC/Paper/issues/8948
-[21:54:41] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 4 worker threads, and gen parallelism of 4 threads
-[21:54:41] [Server thread/INFO]: Default game type: SURVIVAL
-[21:54:41] [Server thread/INFO]: Generating keypair
-[21:54:41] [Server thread/INFO]: Starting Minecraft server on *:25565
-[21:54:41] [Server thread/INFO]: Using default channel type
-[21:54:41] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[21:54:41] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[21:54:41] [Server thread/INFO]: [UndefinedRTP] Loading server plugin UndefinedRTP v${version}
-[21:54:41] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[21:54:41] [Server thread/INFO]: Preparing level "world"
-[21:54:41] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[21:54:41] [Server thread/INFO]: Time elapsed: 137 ms
-[21:54:41] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[21:54:41] [Server thread/INFO]: Time elapsed: 30 ms
-[21:54:41] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[21:54:43] [Server thread/INFO]: Time elapsed: 1340 ms
-[21:54:43] [Server thread/INFO]: [UndefinedRTP] Enabling UndefinedRTP v${version}
-[21:54:43] [Server thread/INFO]: Running delayed init tasks
-[21:54:43] [Server thread/INFO]: Done (2.992s)! For help, type "help"
-[21:54:43] [Server thread/INFO]: Timings Reset
-[21:54:49] [User Authenticator #0/INFO]: UUID of player TheRedMagic is c46d2c49-5de2-48aa-9d50-bdb694491eb4
-[21:54:49] [Server thread/INFO]: TheRedMagic joined the game
-[21:54:49] [Server thread/INFO]: TheRedMagic[/127.0.0.1:49964] logged in with entity id 238 at ([world]-318.67787622658454, 87.0, -96.81086416868295)
-[21:54:51] [Server thread/INFO]: TheRedMagic issued server command: /adminrtp
-[21:54:53] [Server thread/INFO]: Hello
-[21:54:55] [Server thread/INFO]: Hello
-[21:54:56] [Server thread/INFO]: Hello
-[21:54:56] [Server thread/INFO]: Hello
-[21:54:56] [Server thread/INFO]: Hello
+[12:41:04] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 3 worker threads, and gen parallelism of 3 threads
+[12:41:04] [Server thread/INFO]: Default game type: SURVIVAL
+[12:41:04] [Server thread/INFO]: Generating keypair
+[12:41:04] [Server thread/INFO]: Starting Minecraft server on *:25565
+[12:41:04] [Server thread/INFO]: Using default channel type
+[12:41:04] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[12:41:04] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[12:41:04] [Server thread/INFO]: [UndefinedRTP] Loading server plugin UndefinedRTP v${version}
+[12:41:04] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[12:41:04] [Server thread/INFO]: Preparing level "world"
+[12:41:05] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[12:41:06] [Server thread/INFO]: Time elapsed: 1625 ms
+[12:41:06] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[12:41:06] [Server thread/INFO]: Time elapsed: 38 ms
+[12:41:06] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[12:41:06] [Server thread/INFO]: Time elapsed: 26 ms
+[12:41:06] [Server thread/INFO]: [UndefinedRTP] Enabling UndefinedRTP v${version}
+[12:41:07] [Server thread/INFO]: Running delayed init tasks
+[12:41:07] [Server thread/INFO]: Done (4.132s)! For help, type "help"
+[12:41:07] [Server thread/INFO]: Timings Reset
+[12:41:15] [User Authenticator #0/INFO]: UUID of player TheRedMagic is c46d2c49-5de2-48aa-9d50-bdb694491eb4
+[12:41:16] [Server thread/INFO]: TheRedMagic joined the game
+[12:41:16] [Server thread/INFO]: TheRedMagic[/127.0.0.1:63571] logged in with entity id 192 at ([world]-150.21836743027802, 78.0, -264.4632395155605)
+[12:41:18] [Server thread/INFO]: TheRedMagic issued server command: /rtp
+[12:41:21] [Server thread/INFO]: TheRedMagic lost connection: Disconnected
+[12:41:21] [Server thread/INFO]: TheRedMagic left the game
+[12:48:05] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 390942ms or 7818 ticks behind
+[13:42:44] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 1779613ms or 35592 ticks behind
+[17:24:46] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 10796082ms or 215921 ticks behind
+[18:01:35] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 4801ms or 96 ticks behind
+[18:01:36] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2177048ms or 43540 ticks behind

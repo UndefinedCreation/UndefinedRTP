@@ -17,13 +17,37 @@ import com.redmagic.undefinedapi.menu.setRow
 import com.redmagic.undefinedrtp.UndefinedRTP
 import org.bukkit.plugin.java.JavaPlugin
 
-class AdminAllowedBlocks(list: MutableList<ItemStack>, plugin: UndefinedRTP): UndefinedPageMenu("ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ",MenuSize.LARGE, list) {
+class AdminAllowedBlocks(list: MutableList<ItemStack>, val plugin: UndefinedRTP): UndefinedPageMenu("ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ",MenuSize.LARGE, list) {
 
     private val miniMessage = MiniMessage.miniMessage()
 
     override fun generateInventory(): Inventory = createPageInventory {
 
         setRow(5, ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setName(" ").build())
+
+        setItem(50, ItemBuilder(Material.HOPPER)
+                .setName(miniMessage.deserialize("<!i><#32e67d>ᴀᴅᴅ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ"))
+                .addLine(Component.text(" "))
+                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ᴀɴ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ"))
+                .build()
+        )
+
+        setItem(48, ItemBuilder(Material.BARRIER)
+                .setName(miniMessage.deserialize("<!i><#d92323>ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ"))
+                .addLine(Component.text(" "))
+                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ"))
+                .build())
+
+        addButton(Button(48){
+            player!!.openMenu(plugin.adminManager!!.adminGUI)
+        })
+
+        addButton(Button(50){
+            val list = plugin.configManager!!.getBlockedBlockItems()
+
+            player!!.openMenu(AdminChooseBlocksGUI(list, plugin))
+
+        })
 
         setBackButton(
             45, ItemBuilder(Material.RED_STAINED_GLASS_PANE)
@@ -35,7 +59,7 @@ class AdminAllowedBlocks(list: MutableList<ItemStack>, plugin: UndefinedRTP): Un
                 .setName(" ").build()
         )
 
-        setNextButton(53, ItemBuilder(Material.GRAY_STAINED_GLASS_PANE)
+        setNextButton(53, ItemBuilder(Material.LIME_STAINED_GLASS_PANE)
             .setName(miniMessage.deserialize("<!i><#32e67d>ɴᴇxᴛ"))
             .addLine(Component.text(" "))
             .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ")).build(),
@@ -43,9 +67,8 @@ class AdminAllowedBlocks(list: MutableList<ItemStack>, plugin: UndefinedRTP): Un
                 .setName(" ").build()
         )
 
-        addButton(Button(49){
-            println("Hello")
-        })
+
+
     }
 
 
@@ -53,4 +76,5 @@ class AdminAllowedBlocks(list: MutableList<ItemStack>, plugin: UndefinedRTP): Un
         plugin.configManager!!.allowedBlocks.remove(item!!.type)
         player!!.openMenu(plugin.adminManager!!.adminGUI)
     }
+
 }
