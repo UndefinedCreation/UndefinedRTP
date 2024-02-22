@@ -1,67 +1,37 @@
-[21:14:38] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[21:14:39] [ServerMain/INFO]: Loaded 1174 recipes
-[21:14:39] [ServerMain/INFO]: Loaded 1271 advancements
-[21:14:40] [Server thread/INFO]: Starting minecraft server version 1.20.4
-[21:14:40] [Server thread/INFO]: Loading properties
-[21:14:40] [Server thread/INFO]: This server is running Paper version git-Paper-430 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 4939f87)
-[21:14:40] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[21:14:40] [Server thread/INFO]: Using 4 threads for Netty based IO
-[21:14:40] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+[21:13:01] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[21:13:02] [ServerMain/INFO]: Loaded 1174 recipes
+[21:13:02] [ServerMain/INFO]: Loaded 1271 advancements
+[21:13:02] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[21:13:02] [Server thread/INFO]: Loading properties
+[21:13:02] [Server thread/INFO]: This server is running Paper version git-Paper-431 (MC: 1.20.4) (Implementing API version 1.20.4-R0.1-SNAPSHOT) (Git: 3ea95ef)
+[21:13:03] [Server thread/INFO]: Using 4 threads for Netty based IO
+[21:13:03] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[21:13:03] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
     We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
     For more information please visit: https://github.com/PaperMC/Paper/issues/8948
-[21:14:40] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 4 worker threads, and gen parallelism of 4 threads
-[21:14:40] [Server thread/INFO]: Default game type: SURVIVAL
-[21:14:40] [Server thread/INFO]: Generating keypair
-[21:14:40] [Server thread/INFO]: Starting Minecraft server on *:25565
-[21:14:40] [Server thread/INFO]: Using default channel type
-[21:14:40] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[21:14:40] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[21:14:41] [Server thread/INFO]: [UndefinedRTP] Loading server plugin UndefinedRTP v${version}
-[21:14:41] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[21:14:41] [Server thread/INFO]: Preparing level "world"
-[21:14:41] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[21:14:41] [Server thread/INFO]: Time elapsed: 156 ms
-[21:14:41] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[21:14:41] [Server thread/INFO]: Time elapsed: 35 ms
-[21:14:41] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[21:14:43] [Server thread/INFO]: Time elapsed: 1597 ms
-[21:14:43] [Server thread/INFO]: [UndefinedRTP] Enabling UndefinedRTP v${version}
-[21:14:43] [Server thread/INFO]: Running delayed init tasks
-[21:14:43] [Server thread/INFO]: Done (3.286s)! For help, type "help"
-[21:14:43] [Server thread/INFO]: Timings Reset
-[21:14:48] [User Authenticator #0/INFO]: UUID of player TheRedMagic is c46d2c49-5de2-48aa-9d50-bdb694491eb4
-[21:14:48] [Server thread/INFO]: TheRedMagic joined the game
-[21:14:48] [Server thread/INFO]: TheRedMagic[/127.0.0.1:61311] logged in with entity id 293 at ([world]-497.9557992055237, 128.0, -297.52130340189075)
-[21:14:51] [Server thread/INFO]: TheRedMagic issued server command: /rtp
-[21:14:53] [Server thread/WARN]: [EntityLookup] Entity uuid already exists: fccdb239-9221-4b2e-828c-d55dc8ee921a, mapped to EntityPig['Pig'/207, uuid='fccdb239-9221-4b2e-828c-d55dc8ee921a', l='ServerLevel[world]', x=-380.38, y=71.00, z=-191.86, cpos=[-24, -12], tl=244186, v=true], can't add EntityPig['Pig'/417, uuid='fccdb239-9221-4b2e-828c-d55dc8ee921a', l='ServerLevel[world]', x=-387.76, y=77.00, z=-185.47, cpos=[-25, -12], tl=243093, v=false]
-[21:16:07] [Server thread/INFO]: TheRedMagic issued server command: /artp
-[21:16:37] [Server thread/INFO]: TheRedMagic issued server command: /stop
-[21:16:37] [Server thread/INFO]: [TheRedMagic: Stopping the server]
-[21:16:37] [Server thread/INFO]: Stopping server
-[21:16:37] [Server thread/INFO]: [UndefinedRTP] Disabling UndefinedRTP v${version}
-[21:16:37] [Server thread/INFO]: Saving players
-[21:16:37] [Server thread/INFO]: TheRedMagic lost connection: Server closed
-[21:16:37] [Server thread/INFO]: TheRedMagic left the game
-[21:16:37] [Server thread/INFO]: Saving worlds
-[21:16:37] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[21:16:37] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[21:16:37] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[21:16:37] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[21:16:39] [Server thread/INFO]: [ChunkHolderManager] Saved 1377 block chunks, 1109 entity chunks, 0 poi chunks in world 'world' in 1.57s
-[21:16:39] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[21:16:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[21:16:39] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[21:16:39] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[21:16:39] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[21:16:39] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_nether' in 0.42s
-[21:16:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[21:16:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[21:16:40] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[21:16:40] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[21:16:40] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[21:16:40] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_the_end' in 0.18s
-[21:16:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[21:16:40] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[21:16:40] [Server thread/INFO]: Flushing Chunk IO
-[21:16:40] [Server thread/INFO]: Closing Thread Pool
-[21:16:40] [Server thread/INFO]: Closing Server
+[21:13:03] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 4 worker threads, and gen parallelism of 4 threads
+[21:13:03] [Server thread/INFO]: Default game type: SURVIVAL
+[21:13:03] [Server thread/INFO]: Generating keypair
+[21:13:03] [Server thread/INFO]: Starting Minecraft server on *:25565
+[21:13:03] [Server thread/INFO]: Using default channel type
+[21:13:03] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[21:13:03] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[21:13:03] [Server thread/INFO]: [UndefinedRTP] Loading server plugin UndefinedRTP v${version}
+[21:13:03] [Server thread/INFO]: Loading UndefinedRTP
+[21:13:03] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:13:03] [Server thread/INFO]: Preparing level "world"
+[21:13:03] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:13:04] [Server thread/INFO]: Time elapsed: 1041 ms
+[21:13:04] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[21:13:05] [Server thread/INFO]: Time elapsed: 28 ms
+[21:13:05] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[21:13:05] [Server thread/INFO]: Time elapsed: 17 ms
+[21:13:05] [Server thread/INFO]: [UndefinedRTP] Enabling UndefinedRTP v${version}
+[21:13:05] [Server thread/INFO]: Running delayed init tasks
+[21:13:05] [Server thread/INFO]: Done (2.527s)! For help, type "help"
+[21:13:05] [Server thread/INFO]: Timings Reset
+[21:13:05] [Server thread/WARN]: [EntityLookup] Entity uuid already exists: e2eec27c-958b-4307-826b-f748628e2d2e, mapped to EntityEnderDragon['Ender Dragon'/87, uuid='e2eec27c-958b-4307-826b-f748628e2d2e', l='ServerLevel[world_the_end]', x=-2.45, y=75.49, z=-0.02, cpos=[-1, -1], tl=23105, v=true], can't add EntityEnderDragon['Ender Dragon'/100, uuid='e2eec27c-958b-4307-826b-f748628e2d2e', l='ServerLevel[world_the_end]', x=-1.34, y=75.17, z=0.29, cpos=[-1, 0], tl=23107, v=false]
+[21:13:10] [User Authenticator #0/INFO]: UUID of player TheRedMagic is c46d2c49-5de2-48aa-9d50-bdb694491eb4
+[21:13:10] [Server thread/INFO]: TheRedMagic joined the game
+[21:13:10] [Server thread/INFO]: TheRedMagic[/127.0.0.1:58562] logged in with entity id 299 at ([world]-498.39602643466105, 128.0, -298.26201058174286)
+[21:13:11] [Server thread/WARN]: [EntityLookup] Entity uuid already exists: 071deec2-813c-4dcf-a2cd-f568d6648911, mapped to EntityBat['Bat'/314, uuid='071deec2-813c-4dcf-a2cd-f568d6648911', l='ServerLevel[world]', x=-480.16, y=29.06, z=-299.75, cpos=[-31, -19], tl=1411, v=true], can't add EntityBat['Bat'/332, uuid='071deec2-813c-4dcf-a2cd-f568d6648911', l='ServerLevel[world]', x=-479.91, y=29.07, z=-299.68, cpos=[-30, -19], tl=1410, v=false]

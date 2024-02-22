@@ -1,12 +1,16 @@
 package com.redmagic.undefinedrtp
 
 import com.redmagic.undefinedapi.UndefinedAPI
+import com.redmagic.undefinedapi.event.event
+import com.redmagic.undefinedapi.scheduler.delay
+import com.redmagic.undefinedapi.scoreboard.UndefinedScoreboard
 import com.redmagic.undefinedrtp.admin.AdminManager
 import com.redmagic.undefinedrtp.admin.command.AdminCommand
 import com.redmagic.undefinedrtp.commands.RTPCommand
 import com.redmagic.undefinedrtp.data.ConfigManager
 import com.redmagic.undefinedrtp.gui.RTPGUI
 import org.bukkit.Bukkit
+import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.plugin.java.JavaPlugin
 
 class UndefinedRTP : JavaPlugin() {
@@ -34,6 +38,21 @@ class UndefinedRTP : JavaPlugin() {
         rtpManager = RTPManager(this)
 
         registerCommands()
+
+
+        event<PlayerJoinEvent> {
+
+            player.scoreboard = Bukkit.getScoreboardManager().newScoreboard
+
+            val board = UndefinedScoreboard("Test", player.scoreboard)
+                .addLine("IDK")
+                .addEmptyLine()
+                .addEmptyLine()
+                .addValueLine(0, "Prefix ", " Suffix")
+
+            board.setValueLine(0, suffix = " Suffix")
+
+        }
 
     }
 
