@@ -6,11 +6,10 @@ import com.redmagic.undefinedrtp.UndefinedRTP
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Material
-import org.bukkit.inventory.ItemStack
 
 class ConfigManager(val plugin: UndefinedRTP) {
 
-    val miniMessage = MiniMessage.miniMessage()
+    private val miniMessage = MiniMessage.miniMessage()
 
     val overWorld: RTPWorld = RTPWorld(
         plugin.config.getString("overworld.name")!!,
@@ -54,44 +53,26 @@ class ConfigManager(val plugin: UndefinedRTP) {
         plugin.saveConfig()
     }
 
-    fun RTPWorld.save(string: String){
+    private fun RTPWorld.save(string: String){
         plugin.config.set("$string.name", worldName)
         plugin.config.set("$string.range", range)
     }
 
-    fun MutableList<Material>.save(){
-        val list: MutableList<String> = mutableListOf()
-        forEach {
-            list.add(it.name)
-        }
-        plugin.config.set("allow-blocks", list)
+    private fun MutableList<Material>.save() = plugin.config.set("allow-blocks", map(Material::toString))
+
+    fun getItemStackAllowedBlocks() = plugin.configManager.allowedBlocks.map {
+        ItemBuilder(it)
+                .setName(miniMessage.deserialize("<!i><#4fdb72>${it.name.replace("_", " ").toSmallText()}"))
+                .addLine(Component.text(" "))
+                .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ꜰʀᴏᴍ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ")).build()
     }
 
-    fun getItemStackAllowedBlocks(): MutableList<ItemStack>{
-        val list: MutableList<ItemStack> = mutableListOf()
-
-        plugin.configManager!!.allowedBlocks.forEach {
-            list.add(ItemBuilder(it)
-                    .setName(miniMessage.deserialize("<!i><#4fdb72>${it.name.replace("_", " ").toSmallText()}"))
+    fun getBlockedBlockItems() = Material.entries
+            .filter { it.isBlock && it.isSolid && it !in allowedBlocks }
+            .map { ItemBuilder(it)
+                    .setName(miniMessage.deserialize("<!i><#4be394>${it.name.replace("_", " ").toSmallText()}"))
                     .addLine(Component.text(" "))
-                    .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ꜰʀᴏᴍ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ")).build()
-            )
-        }
-        return list
-    }
-
-    fun getBlockedBlockItems(): MutableList<ItemStack>{
-        val list: MutableList<ItemStack> = mutableListOf()
-
-        Material.entries.forEach {
-            if (it.isBlock && !allowedBlocks.contains(it) && it.isSolid)
-                list.add(ItemBuilder(it)
-                        .setName(miniMessage.deserialize("<!i><#4be394>${it.name.replace("_", " ").toSmallText()}"))
-                        .addLine(Component.text(" "))
-                        .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ${it.name.replace("_", " ").toSmallText()} ᴛᴏ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ"))
-                        .build())
-        }
-
-        return list
-    }
+                    .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ${it.name.replace("_", " ").toSmallText()} ᴛᴏ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ"))
+                    .build()
+            }
 }

@@ -11,13 +11,10 @@ import org.bukkit.Material
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
 import com.redmagic.undefinedapi.menu.page.UndefinedPageMenu
-import com.redmagic.undefinedapi.menu.setColumn
-import com.redmagic.undefinedapi.menu.setColumns
 import com.redmagic.undefinedapi.menu.setRow
 import com.redmagic.undefinedrtp.UndefinedRTP
-import org.bukkit.plugin.java.JavaPlugin
 
-class AdminAllowedBlocks(list: MutableList<ItemStack>, val plugin: UndefinedRTP): UndefinedPageMenu("ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ",MenuSize.LARGE, list) {
+class AdminAllowedBlocks(list: List<ItemStack>, val plugin: UndefinedRTP): UndefinedPageMenu("ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ",MenuSize.LARGE, list) {
 
     private val miniMessage = MiniMessage.miniMessage()
 
@@ -39,13 +36,13 @@ class AdminAllowedBlocks(list: MutableList<ItemStack>, val plugin: UndefinedRTP)
                 .build())
 
         addButton(Button(48){
-            player!!.openMenu(plugin.adminManager!!.adminGUI)
+            player.openMenu(plugin.adminManager.adminGUI)
         })
 
         addButton(Button(50){
-            val list = plugin.configManager!!.getBlockedBlockItems()
+            val list = plugin.configManager.getBlockedBlockItems()
 
-            player!!.openMenu(AdminChooseBlocksGUI(list, plugin))
+            player.openMenu(AdminChooseBlocksGUI(list, plugin))
 
         })
 
@@ -73,8 +70,8 @@ class AdminAllowedBlocks(list: MutableList<ItemStack>, val plugin: UndefinedRTP)
 
 
     override var clickData: ClickData.() -> Unit = {
-        plugin.configManager!!.allowedBlocks.remove(item!!.type)
-        player!!.openMenu(plugin.adminManager!!.adminGUI)
+        plugin.configManager.allowedBlocks.remove(item!!.type)
+        player.openMenu(plugin.adminManager.adminGUI)
     }
 
 }

@@ -28,7 +28,7 @@ class AdminChooseBlocksGUI(list: List<ItemStack>, val plugin: UndefinedRTP): Und
                 .build())
 
         addButton(Button(49){
-            player!!.openMenu(AdminAllowedBlocks(plugin.configManager!!.getItemStackAllowedBlocks(), plugin))
+            player.openMenu(AdminAllowedBlocks(plugin.configManager.getItemStackAllowedBlocks(), plugin))
         })
 
         setBackButton(
@@ -51,8 +51,8 @@ class AdminChooseBlocksGUI(list: List<ItemStack>, val plugin: UndefinedRTP): Und
     }
 
     override var clickData: ClickData.() -> Unit = {
-        plugin.configManager!!.allowedBlocks.add(item!!.type)
+        plugin.configManager.allowedBlocks.add(item!!.type)
 
-        player!!.openMenu(AdminAllowedBlocks(plugin.configManager!!.getItemStackAllowedBlocks(), plugin))
+        player.openMenu(AdminAllowedBlocks(plugin.configManager.getItemStackAllowedBlocks(), plugin))
     }
 }

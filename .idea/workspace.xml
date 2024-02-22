@@ -4,83 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b20ed540-26fa-4ba8-9152-0c7010f1dee9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+    <list default="true" id="b20ed540-26fa-4ba8-9152-0c7010f1dee9" name="Changes" comment="RTP Main GUI">
       <change beforePath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.redmagic.UndefinedRTP.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/bukkit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/bukkit.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/commands.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/commands.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/paper-global.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/paper-global.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/paper-world-defaults.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/paper-world-defaults.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/ops.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/ops.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/plugins/UndefinedRTP/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/plugins/UndefinedRTP/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/spigot.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/spigot.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/advancements/c46d2c49-5de2-48aa-9d50-bdb694491eb4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/advancements/c46d2c49-5de2-48aa-9d50-bdb694491eb4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/data/random_sequences.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/data/random_sequences.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/datapacks/bukkit/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/datapacks/bukkit/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.-2.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.-2.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/paper-world.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/playerdata/c46d2c49-5de2-48aa-9d50-bdb694491eb4.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/playerdata/c46d2c49-5de2-48aa-9d50-bdb694491eb4.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/playerdata/c46d2c49-5de2-48aa-9d50-bdb694491eb4.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/playerdata/c46d2c49-5de2-48aa-9d50-bdb694491eb4.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/poi/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/poi/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/poi/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/poi/r.-2.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/poi/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/poi/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-1.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-1.-2.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-2.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-2.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-2.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-2.-2.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.-2.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.-2.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.0.-2.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.0.-2.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world/stats/c46d2c49-5de2-48aa-9d50-bdb694491eb4.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/world/stats/c46d2c49-5de2-48aa-9d50-bdb694491eb4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/data/raids.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/DIM-1/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/paper-world.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_nether/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_nether/session.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/data/raids_end.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/entities/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.-1.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.-1.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.-1.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.0.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.0.-1.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/DIM1/region/r.0.0.mca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/level.dat_old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/paper-world.yml" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/paper-world.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/world_the_end/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/world_the_end/session.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/RTPManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/RTPManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/UndefinedRTP.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/UndefinedRTP.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/AdminManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/AdminManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/command/AdminCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/command/AdminCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminAllowedBlocks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminAllowedBlocks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminChooseBlocksGUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminChooseBlocksGUI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminGUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/admin/gui/AdminGUI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/commands/RTPCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/commands/RTPCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/data/ConfigManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/data/ConfigManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/gui/RTPGUI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/redmagic/undefinedrtp/gui/RTPGUI.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +51,19 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="UndefinedRTP" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="paperweight" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="UndefinedRTP" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="run paper" type="c8890929:TasksNode$1" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="UndefinedRTP" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -150,50 +93,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.UndefinedRTP [reobfJar].executor": "Run",
-    "Gradle.UndefinedRTP [runServer].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.UndefinedRTP [runServer].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.UndefinedRTP [runServer]">
-    <configuration name="UndefinedRTP [reobfJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="reobfJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+}</component>
+  <component name="RunManager">
     <configuration name="UndefinedRTP [runServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -219,9 +139,15 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UndefinedRTP [runServer]" />
-        <item itemvalue="Gradle.UndefinedRTP [reobfJar]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-8f899f12" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -232,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1708502917455</updated>
       <workItem from="1708502918766" duration="8751000" />
-      <workItem from="1708537120462" duration="7934000" />
+      <workItem from="1708597210040" duration="1153000" />
     </task>
     <servers />
   </component>
