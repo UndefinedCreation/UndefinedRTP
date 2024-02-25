@@ -1,7 +1,9 @@
 package com.redmagic.undefinedrtp
 
 import com.redmagic.undefinedapi.UndefinedAPI
+import com.redmagic.undefinedapi.customEvents.PlayerHitByPlayerEvent
 import com.redmagic.undefinedapi.event.event
+import com.redmagic.undefinedapi.extension.string.toComponent
 import com.redmagic.undefinedapi.scheduler.delay
 import com.redmagic.undefinedapi.scoreboard.UndefinedScoreboard
 import com.redmagic.undefinedrtp.admin.AdminManager
@@ -10,8 +12,15 @@ import com.redmagic.undefinedrtp.commands.RTPCommand
 import com.redmagic.undefinedrtp.data.ConfigManager
 import com.redmagic.undefinedrtp.gui.RTPGUI
 import org.bukkit.Bukkit
+import org.bukkit.entity.EnderCrystal
+import org.bukkit.entity.Player
+import org.bukkit.event.entity.EntityDamageByEntityEvent
+import org.bukkit.event.player.PlayerInteractAtEntityEvent
+import org.bukkit.event.player.PlayerInteractEntityEvent
+import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.plugin.java.JavaPlugin
+import java.util.UUID
 
 class UndefinedRTP : JavaPlugin() {
 
@@ -40,18 +49,8 @@ class UndefinedRTP : JavaPlugin() {
         registerCommands()
 
 
-        event<PlayerJoinEvent> {
-
-            player.scoreboard = Bukkit.getScoreboardManager().newScoreboard
-
-            val board = UndefinedScoreboard("Test", player.scoreboard)
-                .addLine("IDK")
-                .addEmptyLine()
-                .addEmptyLine()
-                .addValueLine(0, "Prefix ", " Suffix")
-
-            board.setValueLine(0, suffix = " Suffix")
-
+        event<PlayerHitByPlayerEvent> {
+            Bukkit.broadcast(damager.name.toComponent())
         }
 
     }
