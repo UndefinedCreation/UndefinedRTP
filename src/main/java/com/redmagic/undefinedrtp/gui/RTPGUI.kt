@@ -1,26 +1,24 @@
 package com.redmagic.undefinedrtp.gui
 
-import com.redmagic.undefinedapi.builders.ItemBuilder
-import com.redmagic.undefinedapi.customEvents.PlayerMoveEvent
-import com.redmagic.undefinedapi.event.event
-import com.redmagic.undefinedapi.menu.MenuManager.closeMenu
-import com.redmagic.undefinedapi.menu.MenuSize
-import com.redmagic.undefinedapi.menu.normal.UndefinedMenu
-import com.redmagic.undefinedapi.scheduler.repeatingTask
-import com.redmagic.undefinedapi.scheduler.sync
+import com.undefined.api.builders.ItemBuilder
+import com.undefined.api.event.event
+import com.undefined.api.menu.MenuManager.closeMenu
+import com.undefined.api.menu.MenuSize
+import com.undefined.api.menu.normal.UndefinedMenu
+import com.undefined.api.scheduler.repeatingTask
+import com.undefined.api.scheduler.sync
 import com.redmagic.undefinedrtp.UndefinedRTP
-import net.kyori.adventure.text.Component
+import com.undefined.api.extension.string.translateColor
 import net.kyori.adventure.text.minimessage.MiniMessage
 import net.kyori.adventure.title.TitlePart
 import org.bukkit.Bukkit
 import org.bukkit.Material
+import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.inventory.Inventory
 import java.util.*
 
 class RTPGUI(val plugin: UndefinedRTP): UndefinedMenu("ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ", menuSize = MenuSize.MINI) {
-
-    private val miniMessage = MiniMessage.miniMessage()
 
     private val teleporting: HashMap<UUID, Int> = hashMapOf()
 
@@ -31,9 +29,10 @@ class RTPGUI(val plugin: UndefinedRTP): UndefinedMenu("ʀᴀɴᴅᴏᴍ ᴛᴇʟ
 
         event<PlayerMoveEvent> {
             if (!teleporting.contains(player.uniqueId)) return@event
-            if (player.location.x == fromLocation.x && player.location.y == fromLocation.y && player.location.z == fromLocation.z) return@event
-            teleporting.remove(player.uniqueId)
-            player.sendTitlePart(TitlePart.SUBTITLE, miniMessage.deserialize("<!i><#d92323>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ"))
+            if (to!!.yaw != from.yaw || to!!.pitch != from.pitch) {
+                teleporting.remove(player.uniqueId)
+                player.sendTitle("", "<reset><#d92323>ᴛᴇʟᴇᴘᴏʀᴛ ᴄᴀɴᴄᴇʟᴇᴅ".translateColor())
+            }
         }
         event<PlayerQuitEvent> { teleporting.remove(player.uniqueId) }
 
@@ -43,34 +42,34 @@ class RTPGUI(val plugin: UndefinedRTP): UndefinedMenu("ʀᴀɴᴅᴏᴍ ᴛᴇʟ
         fillEmpty(ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setName(" ").build())
 
         setItem(11, ItemBuilder(Material.GRASS_BLOCK)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#39db64:#2ca34c>ᴏᴠᴇʀᴡᴏʀʟᴅ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ᴏᴠᴇʀᴡᴏʀʟᴅ"))
+                .setName("<reset><bold><#2ca34c>ᴏᴠᴇʀᴡᴏʀʟᴅ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ᴏᴠᴇʀᴡᴏʀʟᴅ".translateColor())
                 .build()
         )
 
         setItem(15, ItemBuilder(Material.END_STONE)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#ab49f5:#9134d9>ᴇɴᴅ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ᴇɴᴅ"))
+                .setName("<reset><bold><#9134d9>ᴇɴᴅ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ᴇɴᴅ".translateColor())
                 .build())
 
         setItem(13, ItemBuilder(Material.NETHERRACK)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#f5252f:#d9212a>ɴᴇᴛʜᴇʀ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ɴᴇᴛʜᴇʀ"))
+                .setName("<reset><bold><#d9212a>ɴᴇᴛʜᴇʀ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴀɴᴅᴏᴍ ᴛᴇʟᴇᴘᴏʀᴛ ɪɴ ᴛʜᴇ ɴᴇᴛʜᴇʀ".translateColor())
                 .build())
 
         addButtons(listOf(11, 13, 15)){
 
             if (teleporting.contains(player.uniqueId)){
-                player.sendMessage(miniMessage.deserialize("<!i><#d92323>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ʙᴇᴇɴɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ"))
+                player.sendMessage("<reset><#d92323>ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ʙᴇᴇɴɪɴɢ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ".translateColor())
                 player.closeInventory()
                 return@addButtons
             }
 
             if (cooldown.contains(player.uniqueId)){
-                player.sendMessage(miniMessage.deserialize("<!i><#d92323>ʏᴏᴜ ᴀʀᴇ ᴏɴ ᴄᴏᴏʟᴅᴏᴡɴ ꜰᴏʀ ${cooldown[player.uniqueId]} ѕᴇᴄᴏɴᴅѕ"))
+                player.sendMessage("<reset><#d92323>ʏᴏᴜ ᴀʀᴇ ᴏɴ ᴄᴏᴏʟᴅᴏᴡɴ ꜰᴏʀ ${cooldown[player.uniqueId]} ѕᴇᴄᴏɴᴅѕ".translateColor())
                 player.closeInventory()
                 return@addButtons
             }
@@ -91,7 +90,7 @@ class RTPGUI(val plugin: UndefinedRTP): UndefinedMenu("ʀᴀɴᴅᴏᴍ ᴛᴇʟ
                 sync {
 
                     if (it == null){
-                        player.sendMessage(miniMessage.deserialize("<!i><#d92323>ᴄᴀɴ'ᴛ ꜰɪɴᴅ ʟᴏᴄᴀᴛɪᴏɴ"))
+                        player.sendMessage("<reset><#d92323>ᴄᴀɴ'ᴛ ꜰɪɴᴅ ʟᴏᴄᴀᴛɪᴏɴ".translateColor())
                         player.closeMenu()
                         player.closeInventory()
                         return@sync
@@ -111,14 +110,14 @@ class RTPGUI(val plugin: UndefinedRTP): UndefinedMenu("ʀᴀɴᴅᴏᴍ ᴛᴇʟ
 
                         if (teleporting.containsKey(player.uniqueId)){
 
-                            player.sendTitlePart(TitlePart.SUBTITLE, miniMessage.deserialize("<!i><#32e67d>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ ${teleporting[player.uniqueId]} ѕᴇᴄᴏɴᴅѕ"))
+                            player.sendTitle("", "<reset><#32e67d>ᴛᴇʟᴇᴘᴏʀᴛɪɴɢ ɪɴ ${teleporting[player.uniqueId]} ѕᴇᴄᴏɴᴅѕ".translateColor())
 
                             var left = teleporting[player.uniqueId]!!
                             left--
                             if (left < 0){
                                 teleporting.remove(player.uniqueId)
 
-                                player.sendTitlePart(TitlePart.SUBTITLE, miniMessage.deserialize("<!i><#32e67d>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ..."))
+                                player.sendTitle("", "<reset><#32e67d>ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ...".translateColor())
 
                                 player.teleport(it.add(0.0,1.0,0.0))
                             }else{

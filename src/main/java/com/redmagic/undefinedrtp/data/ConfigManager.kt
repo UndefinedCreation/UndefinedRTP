@@ -1,8 +1,9 @@
 package com.redmagic.undefinedrtp.data
 
-import com.redmagic.undefinedapi.builders.ItemBuilder
-import com.redmagic.undefinedapi.extension.string.toSmallText
+import com.undefined.api.builders.ItemBuilder
+import com.undefined.api.extension.string.toSmallText
 import com.redmagic.undefinedrtp.UndefinedRTP
+import com.undefined.api.extension.string.translateColor
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Material
@@ -62,17 +63,17 @@ class ConfigManager(val plugin: UndefinedRTP) {
 
     fun getItemStackAllowedBlocks() = plugin.configManager.allowedBlocks.map {
         ItemBuilder(it)
-                .setName(miniMessage.deserialize("<!i><#4fdb72>${it.name.replace("_", " ").toSmallText()}"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ꜰʀᴏᴍ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ")).build()
+                .setName("<reset><#4fdb72>${it.name.replace("_", " ").toSmallText()}".translateColor())
+                .addLine(" ")
+                .addLine("<gray>ᴄʟɪᴄᴋ ᴛᴏ ʀᴇᴍᴏᴠᴇ ꜰʀᴏᴍ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ".translateColor()).build()
     }
 
     fun getBlockedBlockItems() = Material.entries
             .filter { it.isBlock && it.isSolid && it !in allowedBlocks }
             .map { ItemBuilder(it)
-                    .setName(miniMessage.deserialize("<!i><#4be394>${it.name.replace("_", " ").toSmallText()}"))
-                    .addLine(Component.text(" "))
-                    .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ${it.name.replace("_", " ").toSmallText()} ᴛᴏ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ"))
+                    .setName("<reset><#4be394>${it.name.replace("_", " ").toSmallText()}".translateColor())
+                    .addLine(" ")
+                    .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ${it.name.replace("_", " ").toSmallText()} ᴛᴏ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ".translateColor())
                     .build()
             }
 }

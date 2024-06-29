@@ -2,7 +2,6 @@ plugins {
     java
     kotlin("jvm") version "1.9.22"
     id("com.github.johnrengelman.shadow") version "8.1.1"
-    id("io.papermc.paperweight.userdev") version "1.5.10"
     id("xyz.jpenilla.run-paper") version "2.2.2"
 }
 
@@ -11,7 +10,10 @@ version = "1.0"
 
 repositories {
     mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/")
+    maven {
+        name = "spigotmc-repo"
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
     maven {
         name = "undefinedapiRepo"
         url = uri("https://repo.undefinedcreation.com/repo")
@@ -21,22 +23,19 @@ repositories {
 
 
 dependencies {
-    paperweight.paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("com.redmagic:UndefinedAPI:0.4.03")
+    implementation("com.undefined:api:0.5.42:mapped")
     implementation("net.wesjd:anvilgui:1.9.2-SNAPSHOT")
 }
 
 tasks {
-    assemble {
-        dependsOn(reobfJar)
-    }
     shadowJar {
         archiveFileName.set("UndefinedRTP-shadow.jar")
     }
 
     compileKotlin {
-        kotlinOptions.jvmTarget = "17"
+        kotlinOptions.jvmTarget = "21"
     }
     runServer {
         minecraftVersion("1.20.4")
@@ -44,6 +43,6 @@ tasks {
 }
 
 kotlin{
-    jvmToolchain(17)
+    jvmToolchain(21)
 }
 

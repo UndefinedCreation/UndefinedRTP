@@ -1,38 +1,37 @@
 package com.redmagic.undefinedrtp.admin.gui
 
-import com.redmagic.undefinedapi.builders.ItemBuilder
-import com.redmagic.undefinedapi.menu.MenuManager.openMenu
-import com.redmagic.undefinedapi.menu.MenuSize
-import com.redmagic.undefinedapi.menu.normal.button.Button
-import com.redmagic.undefinedapi.menu.normal.button.ClickData
+import com.undefined.api.builders.ItemBuilder
+import com.undefined.api.menu.MenuManager.openMenu
+import com.undefined.api.menu.MenuSize
+import com.undefined.api.menu.normal.button.Button
+import com.undefined.api.menu.normal.button.ClickData
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import org.bukkit.Material
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.ItemStack
-import com.redmagic.undefinedapi.menu.page.UndefinedPageMenu
-import com.redmagic.undefinedapi.menu.setRow
+import com.undefined.api.menu.page.UndefinedPageMenu
+import com.undefined.api.menu.setRow
 import com.redmagic.undefinedrtp.UndefinedRTP
+import com.undefined.api.extension.string.translateColor
 
 class AdminAllowedBlocks(list: List<ItemStack>, val plugin: UndefinedRTP): UndefinedPageMenu("ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ",MenuSize.LARGE, list) {
-
-    private val miniMessage = MiniMessage.miniMessage()
 
     override fun generateInventory(): Inventory = createPageInventory {
 
         setRow(5, ItemBuilder(Material.GRAY_STAINED_GLASS_PANE).setName(" ").build())
 
         setItem(50, ItemBuilder(Material.HOPPER)
-                .setName(miniMessage.deserialize("<!i><#32e67d>ᴀᴅᴅ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ᴀɴ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ"))
+                .setName("<reset><#32e67d>ᴀᴅᴅ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴀᴅᴅ ᴀɴ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋ".translateColor())
                 .build()
         )
 
         setItem(48, ItemBuilder(Material.BARRIER)
-                .setName(miniMessage.deserialize("<!i><#d92323>ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ"))
+                .setName("<reset><#d92323>ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ʙᴀᴄᴋ ᴀɴ ᴍᴇɴᴜ".translateColor())
                 .build())
 
         addButton(Button(48){
@@ -48,18 +47,18 @@ class AdminAllowedBlocks(list: List<ItemStack>, val plugin: UndefinedRTP): Undef
 
         setBackButton(
             45, ItemBuilder(Material.RED_STAINED_GLASS_PANE)
-                .setName(miniMessage.deserialize("<!i><#32e67d>ʙᴀᴄᴋ"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ʙᴀᴄᴋ ᴀ ᴘᴀɢᴇ"))
+                .setName("<reset><#32e67d>ʙᴀᴄᴋ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ʙᴀᴄᴋ ᴀ ᴘᴀɢᴇ".translateColor())
                 .build(),
             ItemBuilder(Material.GRAY_STAINED_GLASS_PANE)
                 .setName(" ").build()
         )
 
         setNextButton(53, ItemBuilder(Material.LIME_STAINED_GLASS_PANE)
-            .setName(miniMessage.deserialize("<!i><#32e67d>ɴᴇxᴛ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ")).build(),
+            .setName("<reset><#32e67d>ɴᴇxᴛ".translateColor())
+            .addLine(" ")
+            .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ɢᴏ ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ".translateColor()).build(),
             ItemBuilder(Material.GRAY_STAINED_GLASS_PANE)
                 .setName(" ").build()
         )

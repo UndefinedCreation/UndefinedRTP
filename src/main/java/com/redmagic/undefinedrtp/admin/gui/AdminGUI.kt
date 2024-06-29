@@ -1,11 +1,12 @@
 package com.redmagic.undefinedrtp.admin.gui
 
-import com.redmagic.undefinedapi.builders.ItemBuilder
-import com.redmagic.undefinedapi.menu.MenuManager.openMenu
-import com.redmagic.undefinedapi.menu.MenuSize
-import com.redmagic.undefinedapi.menu.normal.UndefinedMenu
-import com.redmagic.undefinedapi.menu.normal.button.Button
+import com.undefined.api.builders.ItemBuilder
+import com.undefined.api.menu.MenuManager.openMenu
+import com.undefined.api.menu.MenuSize
+import com.undefined.api.menu.normal.UndefinedMenu
+import com.undefined.api.menu.normal.button.Button
 import com.redmagic.undefinedrtp.UndefinedRTP
+import com.undefined.api.extension.string.translateColor
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.minimessage.MiniMessage
 import net.wesjd.anvilgui.AnvilGUI
@@ -14,8 +15,6 @@ import org.bukkit.Material
 import org.bukkit.inventory.Inventory
 
 class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ ɢᴜɪ", MenuSize.MINI) {
-
-    private val miniMessage = MiniMessage.miniMessage()
 
     override fun generateInventory(): Inventory = createInventory {
 
@@ -46,7 +45,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                 //Change World Range
 
                 val builder = AnvilGUI.Builder()
-                    .itemLeft(ItemBuilder(item!!.type).setName(miniMessage.deserialize("<aqua>${world.range}")).build())
+                    .itemLeft(ItemBuilder(item!!.type).setName("<aqua>${world.range}".translateColor()).build())
                     .title("ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ")
                     .text(world.range.toString())
                     .plugin(plugin)
@@ -67,7 +66,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                         }
 
                     }catch (e: NumberFormatException){
-                        player.sendMessage(miniMessage.deserialize("<red>$text is not a number."))
+                        player.sendMessage("<red>$text is not a number.".translateColor())
                     }
 
                     return@onClick listOf(AnvilGUI.ResponseAction.run{
@@ -82,7 +81,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                 //Change World Name
 
                 val builder = AnvilGUI.Builder()
-                    .itemLeft(ItemBuilder(item!!.type).setName(miniMessage.deserialize("<aqua>${world.worldName}")).build())
+                    .itemLeft(ItemBuilder(item!!.type).setName("<aqua>${world.worldName}".translateColor()).build())
                     .title("ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ")
                     .text(world.worldName)
                     .plugin(plugin)
@@ -94,7 +93,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                     if (bukkitWorld != null){
                         world.worldName = text
                     }else{
-                        player.sendMessage(miniMessage.deserialize("<red>$text world doesn't exists"))
+                        player.sendMessage("<red>$text world doesn't exists".translateColor())
                     }
 
                     return@onClick listOf(AnvilGUI.ResponseAction.run{
@@ -111,7 +110,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
 
 
             val builder = AnvilGUI.Builder()
-                .itemLeft(ItemBuilder(item!!.type).setName(miniMessage.deserialize("<aqua>${plugin.configManager.maxAttemps}")).build())
+                .itemLeft(ItemBuilder(item!!.type).setName("<aqua>${plugin.configManager.maxAttemps}".translateColor()).build())
                 .title("ᴄʜᴀɴɢᴇ ᴍᴀx ᴀᴛᴛᴇᴍᴘѕ")
                 .text(plugin.configManager.maxAttemps.toString())
                 .plugin(plugin)
@@ -125,7 +124,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                     plugin.configManager.maxAttemps = attemps
                     setMaxAttemptsItem(inventory)
                 }catch (e: NumberFormatException){
-                    player.sendMessage(miniMessage.deserialize("<red>$text is not a number."))
+                    player.sendMessage("<red>$text is not a number.".translateColor())
                 }
 
                 return@onClick listOf(AnvilGUI.ResponseAction.run{
@@ -141,7 +140,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
 
 
             val builder = AnvilGUI.Builder()
-                .itemLeft(ItemBuilder(item!!.type).setName(miniMessage.deserialize("<aqua>${plugin.configManager.cooldown}")).build())
+                .itemLeft(ItemBuilder(item!!.type).setName("<aqua>${plugin.configManager.cooldown}".translateColor()).build())
                 .title("ᴄʜᴀɴɢᴇ ᴄᴏᴏʟᴅᴏᴡɴ")
                 .text(plugin.configManager.cooldown.toString())
                 .plugin(plugin)
@@ -155,7 +154,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                     plugin.configManager.cooldown = cooldown
                     setCooldownItem(inventory)
                 }catch (e: NumberFormatException){
-                    player.sendMessage(miniMessage.deserialize("<red>$text is not a number."))
+                    player.sendMessage("<red>$text is not a number.".translateColor())
                 }
 
                 return@onClick listOf(AnvilGUI.ResponseAction.run{
@@ -171,7 +170,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
 
 
             val builder = AnvilGUI.Builder()
-                    .itemLeft(ItemBuilder(item!!.type).setName(miniMessage.deserialize("<aqua>${plugin.configManager.countdown}")).build())
+                    .itemLeft(ItemBuilder(item!!.type).setName("<aqua>${plugin.configManager.countdown}".translateColor()).build())
                     .title("ᴄʜᴀɴɢᴇ ᴄᴏᴜɴᴛᴅᴏᴡɴ")
                     .text(plugin.configManager.cooldown.toString())
                     .plugin(plugin)
@@ -185,7 +184,7 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
                     plugin.configManager.countdown = countdown
                     setCountDownItem(inventory)
                 }catch (e: NumberFormatException){
-                    player.sendMessage(miniMessage.deserialize("<red>$text is not a number."))
+                    player.sendMessage("<red>$text is not a number.".translateColor())
                 }
 
                 return@onClick listOf(AnvilGUI.ResponseAction.run{
@@ -220,17 +219,17 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
 
     private fun setAllowedBlocks(inventory: Inventory){
         inventory.setItem(14, ItemBuilder(Material.OAK_LOG)
-            .setName(miniMessage.deserialize("<!i><bold><#33a14f>ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ѕᴇᴇ ᴀɴᴅ ᴇᴅɪᴛ ᴀʟʟ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ"))
+            .setName(("<reset><bold><#33a14f>ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ".translateColor()))
+            .addLine(" ")
+            .addLine(("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ѕᴇᴇ ᴀɴᴅ ᴇᴅɪᴛ ᴀʟʟ ᴀʟʟᴏᴡᴇᴅ ʙʟᴏᴄᴋѕ".translateColor()))
             .build())
     }
 
     private fun setAutoFillItem(inventory: Inventory){
 
         val string = when(plugin.configManager.autoFillWorldBolder){
-            true -> "<!i><#32e67d>ᴇɴᴀʙʟᴇᴅ"
-            false -> "<!i><#d92323>ᴅɪѕᴀʙʟᴇᴅ"
+            true -> "<reset><#32e67d>ᴇɴᴀʙʟᴇᴅ".translateColor()
+            false -> "<reset><#d92323>ᴅɪѕᴀʙʟᴇᴅ".translateColor()
         }
 
         val material = when(plugin.configManager.autoFillWorldBolder){
@@ -239,69 +238,69 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
         }
 
         inventory.setItem(16, ItemBuilder(material)
-            .setName(miniMessage.deserialize("<!i><bold><#7748f7>ᴀᴜᴛᴏ ꜰɪʟʟ ᴡᴏʀʟᴅʙᴏʀᴅᴇʀ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize(string))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴛᴏɢɢʟᴇ ᴀᴜᴛᴏ ꜰɪʟʟ ᴡᴏʀʟᴅ ʙᴏʀᴅᴇʀ"))
+            .setName("<reset><bold><#7748f7>ᴀᴜᴛᴏ ꜰɪʟʟ ᴡᴏʀʟᴅʙᴏʀᴅᴇʀ".translateColor())
+            .addLine(" ")
+            .addLine(string)
+            .addLine(" ")
+            .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴛᴏɢɢʟᴇ ᴀᴜᴛᴏ ꜰɪʟʟ ᴡᴏʀʟᴅ ʙᴏʀᴅᴇʀ".translateColor())
             .build())
     }
 
     private fun setMaxAttemptsItem(inventory: Inventory){
         inventory.setItem(24, ItemBuilder(Material.REPEATER)
-            .setName(miniMessage.deserialize("<!i><bold><#21d98c>ᴍᴀx ᴀᴛᴛᴇᴍᴘѕ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><aqua>ᴀᴛᴛᴇᴍᴘѕ  <gray>${plugin.configManager.maxAttemps}"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴍᴀx ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴀᴛᴛᴇᴍᴘѕ"))
+            .setName("<reset><bold><#21d98c>ᴍᴀx ᴀᴛᴛᴇᴍᴘѕ".translateColor())
+            .addLine(" ")
+            .addLine("<reset><aqua>ᴀᴛᴛᴇᴍᴘѕ  <gray>${plugin.configManager.maxAttemps}".translateColor())
+            .addLine(" ")
+            .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴍᴀx ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴀᴛᴛᴇᴍᴘѕ".translateColor())
             .build())
     }
 
     private fun setCooldownItem(inventory: Inventory){
         inventory.setItem(6, ItemBuilder(Material.CLOCK)
-            .setName(miniMessage.deserialize("<!i><bold><#e6a732>ᴄᴏᴏʟᴅᴏᴡɴ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><gray>${plugin.configManager.cooldown} <aqua>ѕᴇᴄᴏɴᴅѕ"))
-            .addLine(Component.text(" "))
-            .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴄᴏᴏʟᴅᴏᴡɴ ᴛɪᴍᴇ"))
+            .setName("<reset><bold><#e6a732>ᴄᴏᴏʟᴅᴏᴡɴ".translateColor())
+            .addLine(" ")
+            .addLine("<reset><gray>${plugin.configManager.cooldown} <aqua>ѕᴇᴄᴏɴᴅѕ".translateColor())
+            .addLine(" ")
+            .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴄᴏᴏʟᴅᴏᴡɴ ᴛɪᴍᴇ".translateColor())
             .build())
     }
 
     private fun setNetherItem(inventory: Inventory){
         inventory.setItem(11,
             ItemBuilder(Material.NETHERRACK)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#f5252f:#d9212a>ɴᴇᴛʜᴇʀ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.netherWorld.worldName}"))
-                .addLine(miniMessage.deserialize("<!i><aqua>ʀᴀɴɢᴇ  ${
+                .setName("<reset><bold><#d9212a>ɴᴇᴛʜᴇʀ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.netherWorld.worldName}".translateColor())
+                .addLine("<reset><aqua>ʀᴀɴɢᴇ  ${
                     if (plugin.configManager.autoFillWorldBolder){
                         "<#32e67d>ᴀᴜᴛᴏ ꜰɪʟʟ"
                     }else{
                         "<gray>${plugin.configManager.netherWorld.range}"
                     }
-                }"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ"))
-                .addLine(miniMessage.deserialize("<!i><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ"))
+                }".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ".translateColor())
+                .addLine("<reset><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ".translateColor())
                 .build()
         )
     }
     private fun setEndItem(inventory: Inventory){
         inventory.setItem(12,
             ItemBuilder(Material.END_STONE)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#ab49f5:#9134d9>ᴇɴᴅ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.endWorld.worldName}"))
-                .addLine(miniMessage.deserialize("<!i><aqua>ʀᴀɴɢᴇ  ${
+                .setName("<reset><bold><#9134d9>ᴇɴᴅ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.endWorld.worldName}".translateColor())
+                .addLine("<reset><aqua>ʀᴀɴɢᴇ  ${
                     if (plugin.configManager.autoFillWorldBolder){
                         "<#32e67d>ᴀᴜᴛᴏ ꜰɪʟʟ"
                     }else{
                         "<gray>${plugin.configManager.endWorld.range}"
                     }
-                }"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ"))
-                .addLine(miniMessage.deserialize("<!i><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ"))
+                }".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ".translateColor())
+                .addLine("<reset><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ".translateColor())
                 .build()
         )
     }
@@ -309,30 +308,30 @@ class AdminGUI(private val plugin: UndefinedRTP): UndefinedMenu("ᴀᴅᴍɪɴ �
     private fun setOverworldItem(inventory: Inventory){
         inventory.setItem(10,
             ItemBuilder(Material.GRASS_BLOCK)
-                .setName(miniMessage.deserialize("<!i><bold><gradient:#39db64:#2ca34c>ᴏᴠᴇʀᴡᴏʀʟᴅ</gradient>"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.overWorld.worldName}"))
-                .addLine(miniMessage.deserialize("<!i><aqua>ʀᴀɴɢᴇ  ${
+                .setName("<reset><bold><#2ca34c>ᴏᴠᴇʀᴡᴏʀʟᴅ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><aqua>ᴡᴏʀʟᴅ ɴᴀᴍᴇ  <gray>${plugin.configManager.overWorld.worldName}".translateColor())
+                .addLine("<reset><aqua>ʀᴀɴɢᴇ  ${
                     if (plugin.configManager.autoFillWorldBolder){
                         "<#32e67d>ᴀᴜᴛᴏ ꜰɪʟʟ"
                     }else{
                         "<gray>${plugin.configManager.overWorld.range}"
                     }
-                }"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ"))
-                .addLine(miniMessage.deserialize("<!i><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ"))
+                }".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ʟᴇꜰᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴡᴏʀʟᴅ ɴᴀᴍᴇ".translateColor())
+                .addLine("<reset><gray>ʀɪɢʜᴛ ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ʀᴀɴɢᴇ".translateColor())
                 .build()
         )
     }
 
     private fun setCountDownItem(inventory: Inventory){
         inventory.setItem(15, ItemBuilder(Material.COMPASS)
-                .setName(miniMessage.deserialize("<!i><bold><#2089d4>ᴄᴏᴜɴᴛᴅᴏᴡɴ"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>${plugin.configManager.countdown} <aqua>ѕᴇᴄᴏɴᴅѕ"))
-                .addLine(Component.text(" "))
-                .addLine(miniMessage.deserialize("<!i><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴄᴏᴜɴᴛᴅᴏᴡɴ ᴛɪᴍᴇ"))
+                .setName("<reset><bold><#2089d4>ᴄᴏᴜɴᴛᴅᴏᴡɴ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>${plugin.configManager.countdown} <aqua>ѕᴇᴄᴏɴᴅѕ".translateColor())
+                .addLine(" ")
+                .addLine("<reset><gray>ᴄʟɪᴄᴋ ᴛᴏ ᴄʜᴀɴɢᴇ ᴛʜᴇ ᴄᴏᴜɴᴛᴅᴏᴡɴ ᴛɪᴍᴇ".translateColor())
                 .build())
     }
 

@@ -1,6 +1,6 @@
 package com.redmagic.undefinedrtp
 
-import com.redmagic.undefinedapi.extension.randomLocation
+import com.undefined.api.extension.randomLocation
 import org.bukkit.Location
 import org.bukkit.World
 import java.util.concurrent.CompletableFuture
