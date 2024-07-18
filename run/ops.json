@@ -4,5 +4,11 @@
     "name": "TheRedMagic",
     "level": 4,
     "bypassesPlayerLimit": false
+  },
+  {
+    "uuid": "ab0e17ec-cccb-4ef2-8344-c5f99536652a",
+    "name": "RedApprentice",
+    "level": 4,
+    "bypassesPlayerLimit": false
   }
 ]

@@ -5,7 +5,7 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.2.2"
 }
 
-group = "com.redmagic"
+group = "com.undefined"
 version = "1.0"
 
 repositories {
@@ -25,11 +25,16 @@ repositories {
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("com.undefined:api:0.5.42:mapped")
-    implementation("net.wesjd:anvilgui:1.9.2-SNAPSHOT")
+    implementation("com.undefined:api:0.5.68:mapped")
+    implementation("net.wesjd:anvilgui:1.9.6-SNAPSHOT")
 }
 
 tasks {
+
+    assemble {
+        dependsOn(shadowJar)
+    }
+
     shadowJar {
         archiveFileName.set("UndefinedRTP-shadow.jar")
     }

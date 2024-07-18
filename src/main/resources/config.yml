@@ -31,3 +31,5 @@ auto-fill-worldborder: false
 
 # Max attemps is the attemps the system will try and find a location
 max-attemps: 10
+
+queue-world: "world"
